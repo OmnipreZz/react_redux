@@ -10,3 +10,8 @@ export const deleteTodoAction = (todo) => ({
   type: 'DELETE_TODO_ACTION',
   payload: todo.id
 })
+
+export const addTodoAction = (title) => ({
+  type: 'ADD_TODO_ACTION',
+  payload: {title}
+})
