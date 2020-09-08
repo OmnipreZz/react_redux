@@ -1,5 +1,6 @@
 
-let id = 2;
+let id = 5;
+
 const initialState = [
   {
     id: 1,
@@ -9,7 +10,22 @@ const initialState = [
   {
     id: 2,
     title: 'Préparer le tutoriel',
-    completed: true
+    completed: false
+  },
+  {
+    id: 3,
+    title: 'Enregistrer le tutoriel',
+    completed: false
+  },
+  {
+    id: 4,
+    title: 'Préparer le tutoriel',
+    completed: false
+  },
+  {
+    id: 5,
+    title: 'Enregistrer le tutoriel',
+    completed: false
   }
 ]
 
