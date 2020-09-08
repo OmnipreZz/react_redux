@@ -1,3 +1,4 @@
+import wait from "../wait"
 
 
 export const toggleTodoAction = (todo) => ({
@@ -11,7 +12,11 @@ export const deleteTodoAction = (todo) => ({
   payload: todo.id
 })
 
-export const addTodoAction = (title) => ({
-  type: 'ADD_TODO_ACTION',
-  payload: {title}
-})
+
+export const addTodoAction = (title) => async (dispatch) => {
+  await wait(2000)
+  dispatch({
+    type: 'ADD_TODO_ACTION',
+    payload: {title}
+  })
+}

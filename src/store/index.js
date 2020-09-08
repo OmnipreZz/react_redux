@@ -1,6 +1,8 @@
-import { combineReducers, createStore } from 'redux'
-import { todosReducer } from './todosReducer'
-import { filterReducer } from './filterReducer'
+import { combineReducers, createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { todosReducer } from './todosReducer';
+import { filterReducer } from './filterReducer';
+import thunk from 'redux-thunk';
 
 
 export default createStore(
@@ -8,6 +10,9 @@ export default createStore(
     todos: todosReducer,
     filter: filterReducer
   }),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools(
+    applyMiddleware(thunk),
+    
+  )
 )
 
